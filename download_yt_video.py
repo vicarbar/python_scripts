@@ -1,8 +1,10 @@
-# Descargar vídeo de Youtube desde python en formato mp4. En el ejemplo se usa un vídeo de MrBeastEspañol
+# Descargar vídeo de Youtube desde python en formato mp4. El enlace del vídeo a descargar se le pide al usuario por entrada estándar.
 
 from pytube import YouTube
 
-yt = YouTube("https://www.youtube.com/watch?v=28lCT6FdDFo&ab_channel=MrBeastenEspa%C3%B1ol")
+enlace = input("Introduce el enlace del vídeo que desea descargar: ")
+
+yt = YouTube(enlace)
 
 # Máxima resolución posible
 video = yt.streams.get_highest_resolution()
